@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+*{
+
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.information{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 42px;
+    font-weight: 700;
+    height: 96px;
+
+    border-bottom: 4px solid white;
+
+    background-color: #242424;
+    color: #ffffff;
+
+}
+
+.page{
+
+    display: flex;
+    flex-direction: column;
+    padding-top: 96px;
+    padding-bottom: 128px;
+    gap: 128px;
+    font-family: "Poppins", sans-serif;
+    align-items: center;
+    justify-content: start;
+    background-color: #1A1A1A;
+    width: 100%;
+    min-height: 1080px;
+}
+
+.no-select{
+
+    user-select: none;
+    -webkit-user-select: none;      /* Safari */
+    -moz-user-select: none;         /* Firefox */
+    -ms-user-select: none;          /* Internet Explorer */
+}
+
+.component{
+
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.slider-beta{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 12px;
+}
+
+.slider-frame{
+
+    user-select: none;
+    position: relative;
+    display: flex;
+    background-color: #343233;
+    height: 16rem;
+    width: 100%;
+    overflow: hidden;
+}
+
+.slider{
+
+    display: flex;
+    width: 100%;
+}
+
+.slide-item{
+
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+
+    flex-shrink: 0;
+
+    font-size: 6rem;
+    font-weight: 700;
+    background-color: #424041;
+    color: white;
+}
+
+.slide-buton{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    z-index: 30;
+    position: absolute;
+    cursor: pointer;
+    fill: #d9d9d9;
+    background-color: #2e2e2e;
+}
+
+.slide-previous{ left: -80px; }
+.slide-next{ right: -80px; }
+
+@media (max-width: 1024px){
+
+    .slide-previous{ left: 20px; }
+    .slide-next{ right: 20px; }
+
+}
+
+.slider-number-pagination{
+
+    user-select: none;
+    height: 60px;
+    z-index: 30;
+    position: absolute;
+    bottom: -80px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 360px;
+    gap: 8px;
+    background-color: #343233;
+}
+
+.slider-dot-pagination{
+
+    user-select: none;
+    z-index: 30;
+    position: absolute;
+    bottom: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 8px;
+}
+
+.page-number{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    width: 36px;
+    height: 36px;
+    color: #d9d9d9;
+    background-color: #4a4949;
+}
+
+.page-dot{
+
+    border-radius: 0.5rem;
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+    background-color: #696467;
+}
+
+.page-number.pulse{
+
+    background-color: #efa003;
+}
+
+.page-dot.pulse{
+
+    background-color: #efa003;
+}
+
+.play-stop-component{
+
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    z-index: 50;
+    position: absolute;
+    top: -80px;
+    right: 0;
+    background-color: #343233;
+    padding: 0.5rem;
+}
+
+.play-component{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.3rem;
+    fill: #a8a8a8;
+    color: #a8a8a8;
+    background-color: #d9d9d9;
+    cursor: pointer;
+}
+
+.stop-component{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.3rem;
+    fill: #a8a8a8;
+    color: #a8a8a8;
+    background-color: #d9d9d9;
+    cursor: pointer;
+}
+
+.play-component.pulse{
+
+    fill: #3c3c3c;
+    color: #3c3c3c;
+    background-color: #e2d9d9;
+}
+
+.stop-component.pulse{
+
+    fill: #3c3c3c;
+    color: #3c3c3c;
+    background-color: #e2d9d9;
+}
+
+/* --------------- SLIDE INSIDE EXAMPLES --------------- */
+
+.slide-fly-text{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 16px;
+}
+
+.slide-link{
+
+    text-decoration: none;
+    color: #e2d9d9;
+    width: min-content;
+}
+
+.slide-image{
+
+    object-fit: cover;
+    object-position: center;
+    height: 100%;
+    width: 100%;
+}
+
+/* --------------- SLIDE INSIDE EXAMPLES --------------- */
+
+/* --------------- DRAG TEST --------------- */
+
+.left{
+
+    background-color: #4d4949;
+    width: 120px;
+}
+
+.right{
+
+    background-color: #3c3c3a;
+    width: 120px;
+}
+
+.same-item{
+
+    display: flex;
+    justify-content: space-between;
+
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+
+    flex-shrink: 0;
+
+    font-size: 4rem;
+    font-weight: 700;
+    background-color: #424041;
+    color: white;
+}
+
+.drag-test{
+
+    display: flex;
+    justify-content: space-between;
+
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+
+    flex-shrink: 0;
+
+    font-size: 4rem;
+    font-weight: 700;
+    background-color: #424041;
+    color: white;
+}
+
+/* --------------- DRAG TEST --------------- */
